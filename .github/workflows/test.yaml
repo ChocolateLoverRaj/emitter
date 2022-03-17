@@ -37,5 +37,7 @@ jobs:
         with:
           version: "6.7"
           run_install: true
+      - name: Convert TypeScript into JavaScript
+        run: pnpm build:test
       - name: Run Tests
         run: pnpm test

@@ -1,5 +1,5 @@
-import Data from './Data'
-import emit from './emit'
+import Data from './Data.js'
+import emit from './emit.js'
 
 const risingEdgeEmitter = (emitter: Data<[boolean]>): Data<[]> => {
   const risingEdgeEmitter: Data<[]> = new Set()

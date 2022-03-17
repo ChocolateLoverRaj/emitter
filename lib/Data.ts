@@ -1,4 +1,4 @@
-import Listener from './Listener'
+import Listener from './Listener.js'
 
 export type Data<T extends unknown[]> = Set<Listener<T>>
 

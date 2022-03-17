@@ -1,3 +1,3 @@
-test.todo('Emits on rising edge')
+it('Emits on rising edge')
 
-test.todo("Doesn't emit in falling edge")
+it("Doesn't emit in falling edge")

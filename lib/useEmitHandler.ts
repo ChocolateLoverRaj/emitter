@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import Data from './Data'
-import Listener from './Listener'
+import Data from './Data.js'
+import Listener from './Listener.js'
 
 /**
  * React hook for calling a function when an emitter emits
