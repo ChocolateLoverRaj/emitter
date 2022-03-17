@@ -1,2 +1,2 @@
-test.todo('Handler is called')
-test.todo('Cleans up on unmount')
+it('Handler is called')
+it('Cleans up on unmount')

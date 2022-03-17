@@ -2,11 +2,10 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
-    "build:cjs": "tsc --project tsconfigCjs.json",
-    "build:esm": "tsc --project tsconfigEsm.json",
-    "build": "npm run build:cjs && npm run build:esm",
-    "test": "jest",
-    "build:docs": "typedoc lib/index.ts"
+    "build": "tsc --project tsconfigPublish.json",
+    "test": "mocha dist/**/*.test.js",
+    "build:docs": "typedoc lib/index.ts",
+    "build:test": "tsc"
   },
   "name": "emitter2",
   "version": "1.0.0",
@@ -17,31 +16,26 @@
     "url": "git+https://github.com/ChocolateLoverRaj/emitter.git"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.3",
+    "@types/mocha": "^9.1.0",
+    "@types/sinon": "^10.0.11",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "eslint": "^7.12.1",
     "eslint-config-standard-with-typescript": "21.0.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1 || ^5.0.0",
-    "jest": "^27.0.6",
+    "mocha": "^9.2.2",
     "react": "^17.0.2",
     "release-it": "^14.12.3",
-    "ts-jest": "^27.1.3",
-    "typedoc": "0.22.11",
-    "typescript": "^4.5.5"
+    "sinon": "^13.0.1",
+    "typedoc": "0.22.0-beta.10",
+    "typescript": "^4.7.0-dev.20220316"
   },
   "peerDependencies": {
     "react": "^17.0.2"
   },
-  "main": "dist/cjs/index.js",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
-    }
-  },
-  "types": "./dist/esm/index.d.ts",
+  "type": "module",
+  "exports": "./dist/index.js",
   "dependencies": {
     "tslib": "^2.3.1"
   },

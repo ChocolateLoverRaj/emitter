@@ -5,6 +5,10 @@
     "strictNullChecks": true,
     "importHelpers": true,
     "declaration": true,
-    "moduleResolution": "node"
-  }
+    "rootDir": "./lib",
+    "module": "NodeNext",
+  },
+  "include": [
+    "./lib"
+  ]
 }
