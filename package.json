@@ -34,7 +34,7 @@
     "typescript": "^4.7.0-dev.20220429"
   },
   "type": "module",
-  "exports": "./dist/index.js",
+  "main": "./dist/index.js",
   "dependencies": {
     "tslib": "^2.3.1"
   },
